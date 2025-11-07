@@ -4,9 +4,9 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from .log_utils import log_event
 
-DB_NAME     = "ml_api_db"
+DB_NAME     = "name_your_db" # введите ваше имя базы данных, где находятся таблицы
 DB_USER     = "postgres"
-DB_PASSWORD = "0611"
+DB_PASSWORD = "1234" # введите ваш пароль
 DB_HOST     = "localhost"
 DB_PORT     = "5432"
 
