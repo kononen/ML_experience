@@ -11,19 +11,19 @@
 
 	2. Возможные коды и описания ошибок у GET /status/{task_id} и GET /results/{task_id}
 
-1. /status: 200 (если всё ок), 400 (если пустой список), 404 (если хотя бы один task_id не найден), 500 (любой другой сбой).
+	1) /status: 200 (если всё ок), 400 (если пустой список), 404 (если хотя бы один task_id не найден), 500 (любой другой сбой).
 
-2. /results: 200 (даже если некоторые или все task_id не найдены, мы просто возвращаем "status":"not_found" в теле), 400 (если пустой список), 500 (при сбое БД/кода).
+	2) /results: 200 (даже если некоторые или все task_id не найдены, мы просто возвращаем "status":"not_found" в теле), 400 (если пустой список), 500 (при сбое БД/кода).
 
 
 	3. Примеры POST-запросов:
 
-alexrust@Noutbuk-Pro-A-2024 API_decomposition_2 % curl -X POST "http://localhost:8000/predict" \                                                         
+	1) alexrust@Noutbuk-Pro-A-2024 API_decomposition_2 % curl -X POST "http://localhost:8000/predict" \                                                         
      -H "Content-Type: application/json" \
      -d @payload.json
 
 
-alexrust@Noutbuk-Pro-A-2024 API_decomposition_2 % curl -X POST "http://localhost:8000/predict" \                                                         
+	2) alexrust@Noutbuk-Pro-A-2024 API_decomposition_2 % curl -X POST "http://localhost:8000/predict" \                                                         
      -H "Content-Type: application/json" \
      -d '{           
            "clients": [
@@ -38,9 +38,9 @@ alexrust@Noutbuk-Pro-A-2024 API_decomposition_2 % curl -X POST "http://localhost
 
 	4. Примеры GET-запросов:
 
-curl http://127.0.0.1:8000/results/54749e33-3d6d-49c6-8b04-aad30ff1014c,baef9948-1153-4ee2-87df-4359e1df301d
+	1) curl http://127.0.0.1:8000/results/54749e33-3d6d-49c6-8b04-aad30ff1014c,baef9948-1153-4ee2-87df-4359e1df301d
 
-curl http://127.0.0.1:8000/status/54749e33-3d6d-49c6-8b04-aad30ff1014c,baef9948-1153-4ee2-87df-4359e1df301d 
+	2) curl http://127.0.0.1:8000/status/54749e33-3d6d-49c6-8b04-aad30ff1014c,baef9948-1153-4ee2-87df-4359e1df301d 
 
 
 
